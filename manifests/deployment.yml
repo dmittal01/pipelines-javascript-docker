@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dmittalpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dmittalpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: dmittalpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: dmittalpipelinesjavascriptdocker 
+          image: dmittaladotest.azurecr.io/dmittalpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
